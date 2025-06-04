@@ -1,0 +1,289 @@
+/* Estilos principais */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #3a3a3a; 
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; 
+}
+
+.text {
+    flex: 1;
+}
+
+.image img {
+    border-radius: 50%;
+}
+
+.image {
+    margin-left: 20px; 
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav {
+    background-color: #444;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    transition: background-color 0.3s;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    margin-top: 0;
+    color: #444;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li{
+    background: url('IMGS/Checkmark.png') no-repeat left center;
+    background-size: 20px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.contatos li{
+    background: none;
+    padding-left: 0px;
+}
+
+.contact-icon{
+    width: 20px;
+    height: 20px;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.card-tecnologia img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.card-tecnologia {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.text-tecnologia {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-tecnologia:hover {
+    transform: translateY(-5px);
+    background-color: #5e5e5e;
+    color: white;
+}
+
+.card-tecnologia:hover img {
+    transform: scale(1.1);
+}
+
+.card-tecnologia:hover .text-tecnologia {
+    height: auto;
+    opacity: 1;
+    margin-top: 1rem;
+    color: white;
+}
+
+.tecnologias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+.projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaço entre os projetos */
+    justify-content: center; /* Centraliza os projetos */
+    padding: 2rem;
+}
+
+.projetos .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 1rem;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.projetos .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.projetos .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.projetos .card-body {
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 0 0 8px 8px;
+}
+
+.projetos .card-title {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.projetos .card-text {
+    color: #666;
+    margin-bottom: 1.5rem;
+    min-height: 75px;
+}
+
+.projetos .btn-secondary {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #5e5e5e;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.projetos .btn-secondary:hover {
+    background-color: #444;
+}
+
+.projetos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Para dispositivos pequenos (celulares) */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 15px;
+        max-width: 100%;
+    }
+
+    .tecnologias {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Para dispositivos ainda menores (como celulares muito pequenos) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
+
+    section {
+        padding: 10px;
+    }
+}
